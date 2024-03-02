@@ -1,0 +1,31 @@
+{
+	"name": "ts-example",
+	"version": "1.0.0",
+	"private": true,
+	"description": "",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "npx sern build",
+		"start": "node .",
+		"commands:publish": "sern commands publish"
+	},
+	"keywords": [
+		"typescript",
+		"sern",
+		"discord.js"
+	],
+	"dependencies": {
+		"@octokit/rest": "^20.0.2",
+		"@sern/handler": "^3.0.3",
+		"axios": "^1.6.7",
+		"discord.js": "latest",
+		"dotenv": "^16.3.1",
+		"node-html-parser": "^6.1.12"
+	},
+	"devDependencies": {
+		"@sern/cli": "^1.2.1",
+		"@types/node": "^17.0.25",
+		"typescript": "^5.0"
+	},
+	"type": "module"
+}
