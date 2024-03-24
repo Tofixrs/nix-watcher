@@ -80,12 +80,10 @@ async function handleMerged(thread: AnyThreadChannel) {
 		},
 	});
 	const document = parse(res.data);
-	const acceptedToBranch = document.querySelectorAll(
-		'span.state-accepted+a[href="https://hydra.nixos.org/job/nixos/trunk-combined/tested#tabs-constituents"]',
-	);
+	const acceptedToBranch = document.querySelectorAll("span.state-accepted+a");
 
 	for (const a of acceptedToBranch) {
-		if (a.innerText == "nixpkgs-unstable") {
+		if (a.innerText == "nixos-unstable") {
 			await Promise.all([
 				thread.send("Pr made its way to unstable"),
 				thread.setName(`nix-watch-in-unstable: #${prNum}`),
